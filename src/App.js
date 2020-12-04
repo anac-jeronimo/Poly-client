@@ -43,16 +43,16 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/scan" component={Scan} />
           <Route exact path="/signup" component={Signup} />
-          <Route exact path="/login" component={Login} />
-          {/* <Route exact path="/profile"  render= {
+          <Route exact path="/login" render={() => <Login setCurrentUser={this.setCurrentUser}   loggedInUser={this.state.loggedInUser} />} />
+          <Route exact path="/profile"  render= {
             () => {
               if(localStorage.getItem("loggedInUser")) {
-                return <Profile />
+                return <Scan />
               } else {
                 return <Redirect to="/login" />
               }
             }
-          } component={Profile} /> */}
+          } component={Scan} />
           <Route
             path="/login-google"
             render={() => {

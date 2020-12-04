@@ -5,7 +5,8 @@ import { Link, withRouter } from 'react-router-dom';
 class Signup extends React.Component {
     state = {
         username: '',
-        password: ''
+        password: '',
+        email: ''
     }
 
     handleChange = (event) => {
@@ -30,6 +31,8 @@ class Signup extends React.Component {
                     <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
                     <label>Password:</label>
                     <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
+                    <label>Email:</label>
+                    <input type="email" name="email" value={this.state.email} onChange={this.handleChange} />
                     <button>Signup</button>
                 </form>
                 <p>Already have account? 

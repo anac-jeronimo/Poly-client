@@ -20,7 +20,7 @@ const MyNavbar = (props) => {
   const logoutUser = () => {
     const authService = new AuthService();
     authService.logout().then(() => {
-      this.props.setCurrentUser(null);
+      props.setCurrentUser(null);
       localStorage.removeItem("loggedInUser");
     });
   };
@@ -40,7 +40,9 @@ const MyNavbar = (props) => {
                 <NavLink href="/profile/">Profile</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/logout">Logout</NavLink>
+                <NavLink href="#" onClick={logoutUser}>
+                  Logout
+                </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/scan">Scan</NavLink>
@@ -74,6 +76,9 @@ const MyNavbar = (props) => {
               </NavItem>
               <NavItem>
                 <NavLink href="/login">Login</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/login-google">Login with Google</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

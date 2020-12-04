@@ -15,15 +15,16 @@ class Login extends React.Component {
   };
 
   handleFormSubmit = (event) => {
+
     event.preventDefault();
     const authService = new AuthService();
     authService
       .login(this.state.username, this.state.password)
       .then((response) => {
-        console.log(response);
+
         this.props.setCurrentUser(response.data);
         localStorage.setItem("loggedInUser", response.data._id);
-        this.props.history.push("/profile");
+        this.props.history.push("/scan");
       });
   };
 
@@ -38,27 +39,28 @@ class Login extends React.Component {
 
     return (
       <div>
-        <Form {...layout} name="basic" initialValues={{ remember: true }}>
-          <Form.Item
-            label="Username"
-            name="username"
-            rules={[{ required: true, message: "Please input your username!" }]}
-            type="text"
-            value={this.state.username}
-            onChange={this.handleChange}
-          >
-            <Input />
+        <Form {...layout}>
+          <Form.Item label="Username">
+            <Input
+              name="username"
+              rules={[
+                { required: true, message: "Please input your username!" },
+              ]}
+              type="text"
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
           </Form.Item>
 
-          <Form.Item
-            label="Password"
-            name="password"
-            rules={[{ required: true, message: "Please input your password!" }]}
-            type="password"
-            value={this.state.password}
-            onChange={this.handleChange}
-          >
-            <Input.Password />
+          <Form.Item label="Password">
+            <Input.Password
+              name="password"
+              rules={[
+                { required: true, message: "Please input your password!" },
+              ]}
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
           </Form.Item>
 
           <Form.Item {...tailLayout} name="remember" valuePropName="checked">
@@ -66,7 +68,11 @@ class Login extends React.Component {
           </Form.Item>
 
           <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit">
+            <Button
+              type="primary"
+              htmlType="submit"
+              onClick={this.handleFormSubmit}
+            >
               Submit
             </Button>
           </Form.Item>
