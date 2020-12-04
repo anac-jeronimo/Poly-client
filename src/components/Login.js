@@ -20,69 +20,37 @@ class Login extends React.Component {
     authService
       .login(this.state.username, this.state.password)
       .then((response) => {
-        console.log(response);
         this.props.setCurrentUser(response.data);
         localStorage.setItem("loggedInUser", response.data._id);
-        this.props.history.push("/profile");
+        this.props.history.push("/scan");
       });
   };
 
- layout = {
-    labelCol: {
-      span: 8,
-    },
-    wrapperCol: {
-      span: 16,
-    },
-  };
- tailLayout = {
-    wrapperCol: {
-      offset: 8,
-      span: 16,
-    },
-  };
-  
-  Demo = () => {
-    const onFinish = (values) => {
-      console.log('Success:', values);
-    };
-  
-    const onFinishFailed = (errorInfo) => {
-      console.log('Failed:', errorInfo);
-    };
-
   render() {
-  
-
     return (
       <div>
-        <Form {...layout} name="basic" 
-        initialValues={{ remember: true }} 
-        onFinish={onFinish}
-        onFinishFailed={onFinishFailed} >
-
-          <Form.Item
-            label="Username"
-            name="username"
-            rules={[{ required: true, message: "Please input your username!" }]}
-            type="text"
-            value={this.state.username}
-            onChange={this.handleChange}
-            
-          >
-            <Input />
+        <Form {...layout}>
+          <Form.Item label="Username">
+            <Input
+              name="username"
+              rules={[
+                { required: true, message: "Please input your username!" },
+              ]}
+              type="text"
+              value={this.state.username}
+              onChange={this.handleChange}
+            />
           </Form.Item>
 
-          <Form.Item
-            label="Password"
-            name="password"
-            rules={[{ required: true, message: "Please input your password!" }]}
-            type="password"
-            value={this.state.password}
-            onChange={this.handleChange}
-            
-          >
-            <Input.Password />
+          <Form.Item label="Password">
+            <Input.Password
+              name="password"
+              rules={[
+                { required: true, message: "Please input your password!" },
+              ]}
+              value={this.state.password}
+              onChange={this.handleChange}
+            />
           </Form.Item>
 
           <Form.Item {...tailLayout} name="remember" valuePropName="checked">
@@ -90,7 +58,11 @@ class Login extends React.Component {
           </Form.Item>
 
           <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit">
+            <Button
+              type="primary"
+              htmlType="submit"
+              onClick={this.handleFormSubmit}
+            >
               Submit
             </Button>
           </Form.Item>
@@ -103,7 +75,5 @@ class Login extends React.Component {
     );
   }
 }
-
-ReactDOM.render(<Demo />, mountNode);
 
 export default withRouter(Login);
