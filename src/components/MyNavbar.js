@@ -42,6 +42,9 @@ const MyNavbar = (props) => {
               <NavItem>
                 <NavLink href="/logout">Logout</NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink href="/scan">Scan</NavLink>
+              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Learn More

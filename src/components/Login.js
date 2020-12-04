@@ -36,75 +36,47 @@ class Login extends React.Component {
       wrapperCol: { offset: 8, span: 16 },
     };
 
-    const Demo = () => {
-      const onFinish = (values) => {
-        console.log("Success:", values);
-      };
-
-      const onFinishFailed = (errorInfo) => {
-        console.log("Failed:", errorInfo);
-      };
-      return (
-        <div>
-          <Form
-            {...layout}
-            name="basic"
-            initialValues={{ remember: true }}
-            onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
+    return (
+      <div>
+        <Form {...layout} name="basic" initialValues={{ remember: true }}>
+          <Form.Item
+            label="Username"
+            name="username"
+            rules={[{ required: true, message: "Please input your username!" }]}
+            type="text"
+            value={this.state.username}
+            onChange={this.handleChange}
           >
-            <Form.Item
-              label="Username"
-              name="username"
-              rules={[
-                { required: true, message: "Please input your username!" },
-              ]}
-              type="text"
-              value={this.state.username}
-              onChange={this.handleChange}
-            >
-              <Input />
-            </Form.Item>
+            <Input />
+          </Form.Item>
 
-            <Form.Item
-              label="Password"
-              name="password"
-              rules={[
-                { required: true, message: "Please input your password!" },
-              ]}
-              type="password"
-              value={this.state.password}
-              onChange={this.handleChange}
-            >
-              <Input.Password />
-            </Form.Item>
+          <Form.Item
+            label="Password"
+            name="password"
+            rules={[{ required: true, message: "Please input your password!" }]}
+            type="password"
+            value={this.state.password}
+            onChange={this.handleChange}
+          >
+            <Input.Password />
+          </Form.Item>
 
-            <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-              <Checkbox>Remember me</Checkbox>
-            </Form.Item>
+          <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+            <Checkbox>Remember me</Checkbox>
+          </Form.Item>
 
-            <Form.Item {...tailLayout}>
-              <Button type="primary" htmlType="submit">
-                Submit
-              </Button>
-            </Form.Item>
-          </Form>
-          ); ReactDOM.render(
-          <Demo />, mountNode);
-          {/*  <form onSubmit={this.handleFormSubmit}>
-                    <label>Username:</label>
-                    <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-                    <label>Password:</label>
-                    <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-                    <button>Login</button>
-                </form>*/}
-          <p>
-            Don't have an account?
-            <Link to={"/signup"}> Signup</Link>
-          </p>
-        </div>
-      );
-    };
+          <Form.Item {...tailLayout}>
+            <Button type="primary" htmlType="submit">
+              Submit
+            </Button>
+          </Form.Item>
+        </Form>
+        <p>
+          Don't have an account?
+          <Link to={"/signup"}> Signup</Link>
+        </p>
+      </div>
+    );
   }
 }
 
