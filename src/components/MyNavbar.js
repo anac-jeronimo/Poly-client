@@ -13,8 +13,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText
 } from 'reactstrap';
+import { button } from 'reactstrap';
 
 const MyNavbar = (props) => {
     
@@ -39,8 +39,8 @@ const MyNavbar = (props) => {
                 <div>
                   <Navbar color="light" light expand="md">
                     <NavbarBrand href="/">Poly</NavbarBrand>
-                    <NavbarToggler onClick={toggle} />
-                    <Collapse isOpen={isOpen} navbar>
+                     <NavbarToggler onClick={toggle} />
+                    <Collapse isOpen={isOpen} navbar> 
                       <Nav className="mr-auto" navbar>
                         <NavItem>
                           <NavLink href="/profile/">Profile</NavLink>
@@ -112,65 +112,3 @@ const MyNavbar = (props) => {
     }
 
 export default MyNavbar;
-
-///////////////////////////////////////////////////
-/* import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from 'reactstrap';
-
-const Example = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
-  return (
-    <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
-      </Navbar>
-    </div>
-  );
-}
-
-export default Example;  */
