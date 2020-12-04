@@ -1,12 +1,14 @@
-import axios from 'axios';
+import axios from "axios";
 
-class ColorService {
-    constructor() {
-        let service = axios.create({
-            baseUrl: `${process.env.REACT_APP_PROJECTS_API}/api`
-        });
-        this.service = service;
-    } 
+class ColorsService {
+  constructor() {
+    let service = axios.create({
+      baseURL: `${process.env.REACT_APP_PROJECTS_API}/api`,
+    });
+    this.service = service;
+  }
+  uploadFile(uploadData) {
+    return this.service.post("/upload", uploadData);
+  }
 }
-
-export default ColorService;
+export default ColorsService;

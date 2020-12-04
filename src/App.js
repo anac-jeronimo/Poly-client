@@ -5,6 +5,7 @@ import MyNavbar from "./components/MyNavbar";
 import Login from "./components/Login";
 import React from "react";
 import AuthService from "./utils/auth";
+import Scan from "./components/Scan";
 import { Button } from "reactstrap";
 
 class App extends React.Component {
@@ -40,7 +41,7 @@ class App extends React.Component {
           setCurrentUser={this.setCurrentUser}
         />
         <Switch>
-          {/* <Route exact path="/scan" component={Scan}/> */}
+          <Route exact path="/scan" component={Scan} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
           {/* <Route exact path="/profile"  render= {
