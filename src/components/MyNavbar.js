@@ -55,7 +55,7 @@ const MyNavbar = (props) => {
                   <DropdownItem>Color Theory</DropdownItem>
                   <DropdownItem>Color Blind Codes</DropdownItem>
                   <DropdownItem>Facts about color blindness</DropdownItem>
-                  Credits
+                  <DropdownItem>Credits</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>

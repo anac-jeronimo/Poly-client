@@ -27,6 +27,13 @@ class Login extends React.Component {
   };
 
   render() {
+    const layout = {
+      labelCol: { span: 8 },
+      wrapperCol: { span: 16 },
+    };
+    const tailLayout = {
+      wrapperCol: { offset: 8, span: 16 },
+    };
     return (
       <div>
         <Form {...layout}>
