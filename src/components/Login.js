@@ -27,18 +27,40 @@ class Login extends React.Component {
       });
   };
 
+ layout = {
+    labelCol: {
+      span: 8,
+    },
+    wrapperCol: {
+      span: 16,
+    },
+  };
+ tailLayout = {
+    wrapperCol: {
+      offset: 8,
+      span: 16,
+    },
+  };
+  
+  Demo = () => {
+    const onFinish = (values) => {
+      console.log('Success:', values);
+    };
+  
+    const onFinishFailed = (errorInfo) => {
+      console.log('Failed:', errorInfo);
+    };
+
   render() {
-    const layout = {
-      labelCol: { span: 8 },
-      wrapperCol: { span: 16 },
-    };
-    const tailLayout = {
-      wrapperCol: { offset: 8, span: 16 },
-    };
+  
 
     return (
       <div>
-        <Form {...layout} name="basic" initialValues={{ remember: true }}>
+        <Form {...layout} name="basic" 
+        initialValues={{ remember: true }} 
+        onFinish={onFinish}
+        onFinishFailed={onFinishFailed} >
+
           <Form.Item
             label="Username"
             name="username"
@@ -46,6 +68,7 @@ class Login extends React.Component {
             type="text"
             value={this.state.username}
             onChange={this.handleChange}
+            
           >
             <Input />
           </Form.Item>
@@ -57,6 +80,7 @@ class Login extends React.Component {
             type="password"
             value={this.state.password}
             onChange={this.handleChange}
+            
           >
             <Input.Password />
           </Form.Item>
@@ -79,5 +103,7 @@ class Login extends React.Component {
     );
   }
 }
+
+ReactDOM.render(<Demo />, mountNode);
 
 export default withRouter(Login);
