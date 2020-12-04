@@ -15,13 +15,11 @@ class Login extends React.Component {
   };
 
   handleFormSubmit = (event) => {
-
     event.preventDefault();
     const authService = new AuthService();
     authService
       .login(this.state.username, this.state.password)
       .then((response) => {
-
         this.props.setCurrentUser(response.data);
         localStorage.setItem("loggedInUser", response.data._id);
         this.props.history.push("/scan");
@@ -77,6 +75,7 @@ class Login extends React.Component {
             </Button>
           </Form.Item>
         </Form>
+
         <p>
           Don't have an account?
           <Link to={"/signup"}> Signup</Link>
