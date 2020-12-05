@@ -32,7 +32,7 @@ const MyNavbar = (props) => {
   if (props.loggedInUser) {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar className="myNavbar" color="light" light expand="md">
           <NavbarBrand href="/">Poly</NavbarBrand>
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
@@ -52,7 +52,7 @@ const MyNavbar = (props) => {
                   Learn More
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Color Theory</DropdownItem>
+                  <DropdownItem> Color Theory</DropdownItem>
                   <DropdownItem>Color Blind Codes</DropdownItem>
                   <DropdownItem>Facts about color blindness</DropdownItem>
                   Credits
@@ -66,7 +66,7 @@ const MyNavbar = (props) => {
   } else {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar className="myNavbar" color="light" light expand="md">
           <NavbarBrand href="/">Poly</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -85,10 +85,26 @@ const MyNavbar = (props) => {
                   Learn More
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Color Theory</DropdownItem>
-                  <DropdownItem>Color Blind Codes</DropdownItem>
-                  <DropdownItem>Facts about color blindness</DropdownItem>
-                  <DropdownItem>Credits</DropdownItem>
+                  <DropdownItem>
+                  <NavItem>
+                <NavLink href="/colortheory">Color theory</NavLink>
+              </NavItem>
+                  </DropdownItem>
+                  <DropdownItem>
+                  <NavItem>
+                <NavLink href="/colorcodes">Color Blind Codes</NavLink>
+              </NavItem>                 
+                  </DropdownItem>
+                  <DropdownItem>
+                  <NavItem>
+                <NavLink href="/facts">Facts about color blindness</NavLink>
+              </NavItem>                 
+                  </DropdownItem>
+                  <DropdownItem>
+                  <NavItem>
+                <NavLink href="/credits">Credits</NavLink>
+              </NavItem>
+              </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
@@ -101,64 +117,3 @@ const MyNavbar = (props) => {
 
 export default MyNavbar;
 
-///////////////////////////////////////////////////
-/* import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from 'reactstrap';
-
-const Example = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
-  return (
-    <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
-      </Navbar>
-    </div>
-  );
-}
-
-export default Example;  */
