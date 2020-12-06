@@ -37,14 +37,6 @@ const MyNavbar = (props) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/profile/">Profile</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#" onClick={logoutUser}>
-                  Logout
-                </NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="/scan">Scan</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
@@ -58,6 +50,14 @@ const MyNavbar = (props) => {
                   Credits
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="/profile">Profile</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#" onClick={logoutUser}>
+                  Logout
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
@@ -66,47 +66,63 @@ const MyNavbar = (props) => {
   } else {
     return (
       <div>
-        <Navbar className="myNavbar" color="light" light expand="md">
+        <Navbar className="nav myNavbar" color="light" light expand="md">
           <NavbarBrand href="/">Poly</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/signup">Signup</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/login">Login</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/login-google">Login with Google</NavLink>
+                <NavLink className="myNavbar" href="/scan">Scan</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
+                <DropdownToggle className="myNavbar" nav caret>
                   Learn More
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
                   <NavItem>
-                <NavLink href="/colortheory">Color theory</NavLink>
+                <NavLink className="myNavbar" href="/colortheory">Color theory</NavLink>
               </NavItem>
                   </DropdownItem>
                   <DropdownItem>
                   <NavItem>
-                <NavLink href="/colorcodes">Color Blind Codes</NavLink>
+                <NavLink className="myNavbar" href="/colorcodes">Color Blind Codes</NavLink>
               </NavItem>                 
                   </DropdownItem>
                   <DropdownItem>
                   <NavItem>
-                <NavLink href="/facts">Facts about color blindness</NavLink>
+                <NavLink className="myNavbar" href="/facts">Facts about color blindness</NavLink>
               </NavItem>                 
                   </DropdownItem>
                   <DropdownItem>
                   <NavItem>
-                <NavLink href="/credits">Credits</NavLink>
+                <NavLink className="myNavbar" href="/credits">Credits</NavLink>
               </NavItem>
               </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle className="myNavbar" nav caret>
+                  Authentication
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                  <NavItem>
+                  <NavLink className="myNavbar" href="/login-google">Login with Google</NavLink>
+              </NavItem>
+                  </DropdownItem>
+                  <DropdownItem>
+                  <NavItem>
+                  <NavLink className="myNavbar auth" href="/signup">Signup</NavLink>
+              </NavItem>
+                  </DropdownItem>
+                  <DropdownItem>
+                  <NavItem>
+                  <NavLink className="myNavbar auth" href="/login">Login</NavLink>
+              </NavItem>
+                  </DropdownItem>
+                  </DropdownMenu>
+                  </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>

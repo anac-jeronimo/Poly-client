@@ -21,7 +21,7 @@ function Facts () {
             <img src="colorblind.JPG" />
 
             <h6>Useful link: </h6>
-            <a href="https://www.iamcal.com/misc/colors/"> Click me</a>
+            <a target="_blank" href="https://www.iamcal.com/misc/colors/"> Click me</a>
 
         </div>
     )

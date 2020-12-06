@@ -6,13 +6,18 @@ import Login from "./components/Login";
 import React from "react";
 import AuthService from "./utils/auth";
 import Scan from "./components/Scan";
-import { Button } from "reactstrap";
+/* import { Button } from "reactstrap"; */
 import Facts from './components/Facts'
 import ColorCodes from "./components/ColorCodes";
 import ColorTheory from "./components/ColorTheory";
 import Credits from "./components/Credits";
+import Profile from "./components/Profile";
 import "./components/ColorTheo.css";
 import "./components/NavLogSign.css";
+import "./components/Login.css";
+import "./components/Facts.css";
+import "./components/ColorCodes.css";
+import "./components/Scan.css";
 
 class App extends React.Component {
   state = {
@@ -54,12 +59,12 @@ class App extends React.Component {
           <Route exact path="/profile"  render= {
             () => {
               if(localStorage.getItem("loggedInUser")) {
-                return <Scan />
+                return <Profile />
               } else {
                 return <Redirect to="/login" />
               }
             }
-          } component={Scan} />
+          } component={Profile} />
           <Route
             path="/login-google"
             render={() => {
