@@ -29,6 +29,15 @@ class Homepage extends React.Component {
     return (
       <div>
         <Slider />
+        <div>
+          <h1>What is POLY?</h1>
+          <h3>
+            Poly is an app designed to help those with color blindness and / or
+            reduced vision. Poly allows you to upload images or use the camera
+            in order to translate the dominant color to the symbol created by
+            ColorAdd that corresponds to it!
+          </h3>
+        </div>
         <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
           <div className="form-group">
             <div>
