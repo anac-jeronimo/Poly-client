@@ -1,0 +1,42 @@
+.text-div {
+    /* display: flex;
+    justify-content: right; */
+     margin-left: 3vh; 
+    }
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.bigP {
+   
+    margin-top: 4vh;
+}
+
+.imgdiv {
+    margin-left: 8vh; 
+    margin-top: 4vh;
+
+}
+.img-stripes{
+    margin-top: 3vh;
+}
+
+/* .container-fluid {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 auto;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+}
+ */
+
+ .useful-link {
+     margin-top: 4vh;
+ }
+
+ .facts-list{
+     margin-top: 4vh; 
+ }
