@@ -35,7 +35,10 @@ function Facts() {
         Here are some illustrations of the most common forms of color-blindness:
       </h3>
 
-      <img src="images/colorblind.JPG" />
+      <img
+        src="images/colorblind.JPG"
+        alt="color blindness spectrum comparison"
+      />
 
       <h6>Useful link: </h6>
       <a target="_blank" href="https://www.iamcal.com/misc/colors/">
