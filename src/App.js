@@ -10,7 +10,6 @@ import Scan from "./components/Scan";
 import Facts from "./components/Facts";
 import ColorCodes from "./components/ColorCodes";
 import ColorTheory from "./components/ColorTheory";
-import Credits from "./components/Credits";
 import Profile from "./components/Profile";
 /* import "../public/stylesheet/ColorTheo.css";
 import "../public/stylesheet/NavLogSign.css";
@@ -86,7 +85,6 @@ class App extends React.Component {
           <Route exact path="/colortheory" component={ColorTheory} />
           <Route exact path="/facts" component={Facts} />
           <Route exact path="/colorcodes" component={ColorCodes} />
-          <Route exact path="/credits" component={Credits} />
         </Switch>
       </div>
     );
