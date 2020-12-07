@@ -3,12 +3,12 @@ import ColorsService from "../utils/api";
 import Slider from "./Slider";
 
 class Homepage extends React.Component {
-  state = {
+ /*  state = {
     file: "",
     fileUrlOnCloudinary: "",
-  };
+  }; */
 
-  handleFormSubmit = (event) => {
+/*   handleFormSubmit = (event) => {
     event.preventDefault();
     const colorsService = new ColorsService();
     const uploadData = new FormData();
@@ -23,7 +23,7 @@ class Homepage extends React.Component {
 
   handleFileChange = (event) => {
     this.setState({ file: event.target.files[0] });
-  };
+  }; */
 
   render() {
     return (
@@ -38,7 +38,7 @@ class Homepage extends React.Component {
             ColorAdd that corresponds to it!
           </h3>
         </div>
-        <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
+        {/* <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
           <div className="form-group">
             <div>
               <label>Please Select an Image:</label>
@@ -55,7 +55,7 @@ class Homepage extends React.Component {
           <img src={this.state.fileUrlOnCloudinary} />
         ) : (
           <div></div>
-        )}
+        )} */}
       </div>
     );
   }

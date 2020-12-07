@@ -17,7 +17,7 @@ class Profile extends React.Component {
       <div>
         <div>
           <h3 className="welcome">
-            Welcome {this.state.loggedInUser.username}
+            Welcome, {this.state.loggedInUser.username}
           </h3>
         </div>
         <div>
