@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "./Slider";
 
 class Profile extends React.Component {
   state = {
@@ -14,7 +15,12 @@ class Profile extends React.Component {
   render() {
     return this.state.loggedInUser ? (
       <div>
-        <h3>Welcome {this.state.loggedInUser.username}</h3>
+        <div>
+          <h3>Welcome {this.state.loggedInUser.username}</h3>
+        </div>
+        <div>
+          <Slider />
+        </div>
       </div>
     ) : null;
   }
