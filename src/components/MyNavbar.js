@@ -54,7 +54,7 @@ const MyNavbar = (props) => {
                 <NavLink href="/profile">Profile</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="#" onClick={logoutUser}>
+                <NavLink href="/" onClick={logoutUser}>
                   Logout
                 </NavLink>
               </NavItem>
@@ -72,7 +72,9 @@ const MyNavbar = (props) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink className="myNavbar" href="/scan">Scan</NavLink>
+                <NavLink className="myNavbar" href="/scan">
+                  Scan
+                </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle className="myNavbar" nav caret>
@@ -80,25 +82,33 @@ const MyNavbar = (props) => {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                  <NavItem>
-                <NavLink className="myNavbar" href="/colortheory">Color theory</NavLink>
-              </NavItem>
+                    <NavItem>
+                      <NavLink className="myNavbar" href="/colortheory">
+                        Color theory
+                      </NavLink>
+                    </NavItem>
                   </DropdownItem>
                   <DropdownItem>
-                  <NavItem>
-                <NavLink className="myNavbar" href="/colorcodes">Color Blind Codes</NavLink>
-              </NavItem>                 
+                    <NavItem>
+                      <NavLink className="myNavbar" href="/colorcodes">
+                        Color Blind Codes
+                      </NavLink>
+                    </NavItem>
                   </DropdownItem>
                   <DropdownItem>
-                  <NavItem>
-                <NavLink className="myNavbar" href="/facts">Facts about color blindness</NavLink>
-              </NavItem>                 
+                    <NavItem>
+                      <NavLink className="myNavbar" href="/facts">
+                        Facts about color blindness
+                      </NavLink>
+                    </NavItem>
                   </DropdownItem>
                   <DropdownItem>
-                  <NavItem>
-                <NavLink className="myNavbar" href="/credits">Credits</NavLink>
-              </NavItem>
-              </DropdownItem>
+                    <NavItem>
+                      <NavLink className="myNavbar" href="/credits">
+                        Credits
+                      </NavLink>
+                    </NavItem>
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <UncontrolledDropdown nav inNavbar>
@@ -107,22 +117,28 @@ const MyNavbar = (props) => {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                  <NavItem>
-                  <NavLink className="myNavbar" href="/login-google">Login with Google</NavLink>
-              </NavItem>
+                    <NavItem>
+                      <NavLink className="myNavbar" href="/login-google">
+                        Login with Google
+                      </NavLink>
+                    </NavItem>
                   </DropdownItem>
                   <DropdownItem>
-                  <NavItem>
-                  <NavLink className="myNavbar auth" href="/signup">Signup</NavLink>
-              </NavItem>
+                    <NavItem>
+                      <NavLink className="myNavbar auth" href="/signup">
+                        Signup
+                      </NavLink>
+                    </NavItem>
                   </DropdownItem>
                   <DropdownItem>
-                  <NavItem>
-                  <NavLink className="myNavbar auth" href="/login">Login</NavLink>
-              </NavItem>
+                    <NavItem>
+                      <NavLink className="myNavbar auth" href="/login">
+                        Login
+                      </NavLink>
+                    </NavItem>
                   </DropdownItem>
-                  </DropdownMenu>
-                  </UncontrolledDropdown>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
@@ -132,4 +148,3 @@ const MyNavbar = (props) => {
 };
 
 export default MyNavbar;
-
