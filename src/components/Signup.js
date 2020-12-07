@@ -25,17 +25,19 @@ class Signup extends React.Component {
 
     render() {
         return(
+        
             <div>
-                 <form onSubmit={this.handleFormSubmit}>
-                    <label>Username:</label>
-                    <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-                    <label>Password:</label>
-                    <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-                    <label>Email:</label>
-                    <input type="email" name="email" value={this.state.email} onChange={this.handleChange} />
-                    <button>Signup</button>
+                 <form className="login-box" onSubmit={this.handleFormSubmit}>
+                 <img src="eye.png" class="avatar"/>
+                    {/* <label>Username:</label> */}
+                    <input className="input" type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange}/>
+                    {/* <label>Password:</label> */}
+                    <input className="input" type="password" name="password" placeholder="Password" value={this.state.password} onChange={this.handleChange} />
+                    {/* <label>Email:</label> */}
+                    <input className="input" type="email" name="email" placeholder="Email" value={this.state.email} onChange={this.handleChange} />
+                    <button className="login-btn">Signup</button>
                 </form>
-                <p>Already have account? 
+                <p className="loginP">Already have an account? 
                     <Link to={"/login"}> Login</Link>
                 </p>
             </div>

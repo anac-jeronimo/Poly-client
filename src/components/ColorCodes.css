@@ -1,0 +1,34 @@
+
+.title{
+    margin-top: 3vh;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.bigP {
+    width: 60vh;
+    margin-top: 4vh;
+    margin-left: 4vh;
+}
+
+.img2, .img3, .img4 {
+    margin-top: 5vh;
+}
+
+.img3 {
+    margin-bottom: 6vh;
+}
+
+.img1 {
+    margin-top: 6vh ;
+}
+.img5 {
+    margin-top: 15vh;
+}

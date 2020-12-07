@@ -1,0 +1,29 @@
+
+/* navbar */
+.nav {
+    position: absolute;
+   color: rgba(15, 14, 14, 0.007) !important;
+   background-color: rgb(182, 179, 179) !important;
+   height: 8vh;
+}
+
+.myNavbar {
+    padding-left: 4vh !important;
+}
+
+.myNavbar:hover {
+    color: black !important;  
+}
+
+.auth {
+    display: flex;
+    justify-content: flex-end;
+}
+.inactive{
+    background-color: none;
+}
+
+/* audio {
+    width: 128px;
+    height: 25px;
+  }  */

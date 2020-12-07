@@ -1,0 +1,32 @@
+
+.color-theory-p {
+    display: flex;
+    justify-content: right;
+    margin-left: 15vh;
+    margin-top: 2vh;
+    width: 30vh;
+}
+
+.color-theory-title{
+    margin-top: 3vh;
+    display: inline-block;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bigP {
+    width: 60vh;
+    margin-top: 4vh;
+}
+
+.color-theory-p > img {
+    margin-top: 4vh;
+}
+
+ ul > li{
+    list-style-type: none;
+}

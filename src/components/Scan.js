@@ -27,10 +27,16 @@ class Scan extends React.Component {
   render() {
     return (
       <div>
+
         <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
-          <label>Image</label>
-          <input type="file" onChange={this.handleFileChange} />
-          <button>Upload</button>
+          <div className="form-group">
+            
+            <div>
+            <label>Please Select an Image:</label>
+              <input className="form-control-file" type="file" onChange={this.handleFileChange} />
+            </div>
+            <button className="button-upload">Upload</button>
+          </div>
         </form>
         {this.state.fileUrlOnCloudinary ? (
           <img src={this.state.fileUrlOnCloudinary} />
@@ -38,6 +44,7 @@ class Scan extends React.Component {
           <div></div>
         )}
       </div>
+        
     );
   }
 }

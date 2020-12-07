@@ -6,7 +6,18 @@ import Login from "./components/Login";
 import React from "react";
 import AuthService from "./utils/auth";
 import Scan from "./components/Scan";
-import { Button } from "reactstrap";
+/* import { Button } from "reactstrap"; */
+import Facts from './components/Facts'
+import ColorCodes from "./components/ColorCodes";
+import ColorTheory from "./components/ColorTheory";
+import Credits from "./components/Credits";
+import Profile from "./components/Profile";
+import "./components/ColorTheo.css";
+import "./components/NavLogSign.css";
+import "./components/Login.css";
+import "./components/Facts.css";
+import "./components/ColorCodes.css";
+import "./components/Scan.css";
 
 class App extends React.Component {
   state = {
@@ -41,24 +52,29 @@ class App extends React.Component {
           setCurrentUser={this.setCurrentUser}
         />
         <Switch>
+          <Route exact path="/" component={Scan} />
           <Route exact path="/scan" component={Scan} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" render={() => <Login setCurrentUser={this.setCurrentUser}   loggedInUser={this.state.loggedInUser} />} />
           <Route exact path="/profile"  render= {
             () => {
               if(localStorage.getItem("loggedInUser")) {
-                return <Scan />
+                return <Profile />
               } else {
                 return <Redirect to="/login" />
               }
             }
-          } component={Scan} />
+          } component={Profile} />
           <Route
             path="/login-google"
             render={() => {
               window.location.href = `${process.env.REACT_APP_PROJECTS_API}/api/auth/google`;
             }}
           />
+          <Route exact path="/colortheory" component={ColorTheory} />
+          <Route exact path="/facts" component={Facts}/>
+          <Route exact path="/colorcodes" component={ColorCodes} />
+          <Route exact path="/credits" component={Credits} />
         </Switch>
       </div>
     );

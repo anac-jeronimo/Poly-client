@@ -36,9 +36,12 @@ class Login extends React.Component {
     };
     return (
       <div>
+      <div className="login-box">
+      <img src="eye.png" class="avatar"/>
         <Form {...layout}>
-          <Form.Item label="Username">
-            <Input
+          <Form.Item >
+            <Input 
+              placeholder="Username" 
               name="username"
               rules={[
                 { required: true, message: "Please input your username!" },
@@ -49,8 +52,9 @@ class Login extends React.Component {
             />
           </Form.Item>
 
-          <Form.Item label="Password">
-            <Input.Password
+          <Form.Item >
+            <Input.Password 
+              placeholder="Password"
               name="password"
               rules={[
                 { required: true, message: "Please input your password!" },
@@ -60,12 +64,12 @@ class Login extends React.Component {
             />
           </Form.Item>
 
-          <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
+         {/*  <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+            <Checkbox className="checkbox">Remember me</Checkbox>
+          </Form.Item> */}
 
           <Form.Item {...tailLayout}>
-            <Button
+            <Button className="login-btn"
               type="primary"
               htmlType="submit"
               onClick={this.handleFormSubmit}
@@ -75,10 +79,11 @@ class Login extends React.Component {
           </Form.Item>
         </Form>
 
-        <p>
+        <p className="loginP">
           Don't have an account?
-          <Link to={"/signup"}> Signup</Link>
+          <Link className="signA" to={"/signup"}> Signup</Link>
         </p>
+      </div>
       </div>
     );
   }
