@@ -75,7 +75,7 @@ class App extends React.Component {
                 return <Redirect to="/login" />;
               }
             }}
-            component={Profile}
+            component={Scan}
           />
           <Route
             path="/login-google"
