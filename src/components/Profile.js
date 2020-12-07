@@ -16,7 +16,9 @@ class Profile extends React.Component {
     return this.state.loggedInUser ? (
       <div>
         <div>
-          <h3>Welcome {this.state.loggedInUser.username}</h3>
+          <h3 className="welcome">
+            Welcome {this.state.loggedInUser.username}
+          </h3>
         </div>
         <div>
           <Slider />

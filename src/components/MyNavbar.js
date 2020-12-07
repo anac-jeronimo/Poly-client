@@ -37,7 +37,9 @@ const MyNavbar = (props) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/scan">Scan</NavLink>
+                <NavLink href="/scan" className="scan-navbar">
+                  <strong>Scan</strong>
+                </NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
