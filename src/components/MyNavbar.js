@@ -65,13 +65,6 @@ const MyNavbar = (props) => {
                       </NavLink>
                     </NavItem>
                   </DropdownItem>
-                  <DropdownItem>
-                    <NavItem>
-                      <NavLink className="myNavbar" href="/credits">
-                        Credits
-                      </NavLink>
-                    </NavItem>
-                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
@@ -123,13 +116,6 @@ const MyNavbar = (props) => {
                     <NavItem>
                       <NavLink className="myNavbar" href="/facts">
                         Facts about color blindness
-                      </NavLink>
-                    </NavItem>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <NavItem>
-                      <NavLink className="myNavbar" href="/credits">
-                        Credits
                       </NavLink>
                     </NavItem>
                   </DropdownItem>
