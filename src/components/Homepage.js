@@ -1,8 +1,8 @@
-//import { Slider } from "antd";
 import React from "react";
 import ColorsService from "../utils/api";
+import Slider from "./Slider";
 
-class Scan extends React.Component {
+class Homepage extends React.Component {
   state = {
     file: "",
     fileUrlOnCloudinary: "",
@@ -28,6 +28,7 @@ class Scan extends React.Component {
   render() {
     return (
       <div>
+        <Slider />
         <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
           <div className="form-group">
             <div>
@@ -51,4 +52,4 @@ class Scan extends React.Component {
   }
 }
 
-export default Scan;
+export default Homepage;

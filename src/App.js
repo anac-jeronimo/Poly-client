@@ -12,6 +12,8 @@ import ColorCodes from "./components/ColorCodes";
 import ColorTheory from "./components/ColorTheory";
 import Credits from "./components/Credits";
 import Profile from "./components/Profile";
+import Slider from "./components/Slider";
+import Homepage from "./components/Homepage";
 /* import "../public/stylesheet/ColorTheo.css";
 import "../public/stylesheet/NavLogSign.css";
 import "../public/stylesheet/Login.css";
@@ -52,7 +54,7 @@ class App extends React.Component {
           setCurrentUser={this.setCurrentUser}
         />
         <Switch>
-          <Route exact path="/" component={Scan} />
+          <Route exact path="/" component={Homepage} />
           <Route exact path="/scan" component={Scan} />
           <Route exact path="/signup" component={Signup} />
           <Route
