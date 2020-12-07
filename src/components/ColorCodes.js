@@ -29,23 +29,35 @@ class ColorCodes extends React.Component {
                 silver or gold are shown with a left parenthesis on the symbols.
               </p>
               <div className="img1">
-                <img src="images/basic-color-codes.jpg" />
+                <img
+                  src="images/basic-color-codes.jpg"
+                  alt="colorAdd baisic color symbols"
+                />
               </div>
               <div className="img2">
-                <img src="images/Code_cinzas.gif" />
+                <img
+                  src="images/Code_cinzas.gif"
+                  alt="colorAdd grey tons symbols"
+                />
               </div>
             </div>
             <div className="col-sm">
               <div className="img3">
-                <img src="images/COLOR-ADD_1.jpg" />
+                <img
+                  src="images/COLOR-ADD_1.jpg"
+                  alt="colorAdd translation graph"
+                />
               </div>
               <div className="img4">
-                <img src="images/image.jpg" />
+                <img src="images/image.jpg" alt="color combinations" />
               </div>
             </div>
             <div className="col-sm">
               <div className="img5">
-                <img src="images/CODE-CLARO-ESCURO.gif" />
+                <img
+                  src="images/CODE-CLARO-ESCURO.gif"
+                  alt="tonal color symbols"
+                />
               </div>
             </div>
           </div>

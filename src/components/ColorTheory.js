@@ -9,7 +9,10 @@ function ColorTheory() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm color-theory-img">
-            <img src="images/Color_diagram_Charles_Hayter.jpg"></img>
+            <img
+              src="images/Color_diagram_Charles_Hayter.jpg"
+              alt="Charles Hayter's diagram"
+            ></img>
             <p className="color-theory-p">Color diagram Charles Hayter</p>
           </div>
           <div className="col-sm bigP">
@@ -48,7 +51,7 @@ function ColorTheory() {
             </ul>
           </div>
           <div className="col-sm">
-            <img src="images/colorwheel.jpg" />
+            <img src="images/colorwheel.jpg" alt="color wheel" />
           </div>
         </div>
       </div>
