@@ -44,10 +44,34 @@ const MyNavbar = (props) => {
                   Learn More
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem> Color Theory</DropdownItem>
-                  <DropdownItem>Color Blind Codes</DropdownItem>
-                  <DropdownItem>Facts about color blindness</DropdownItem>
-                  <DropdownItem>Credits</DropdownItem>
+                  <DropdownItem>
+                    <NavItem>
+                      <NavLink className="myNavbar" href="/colortheory">
+                        Color theory
+                      </NavLink>
+                    </NavItem>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavItem>
+                      <NavLink className="myNavbar" href="/colorcodes">
+                        Color Blind Codes
+                      </NavLink>
+                    </NavItem>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavItem>
+                      <NavLink className="myNavbar" href="/facts">
+                        Facts about color blindness
+                      </NavLink>
+                    </NavItem>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <NavItem>
+                      <NavLink className="myNavbar" href="/credits">
+                        Credits
+                      </NavLink>
+                    </NavItem>
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
