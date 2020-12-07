@@ -10,5 +10,9 @@ class ColorsService {
   uploadFile(uploadData) {
     return this.service.post("/upload", uploadData);
   }
+
+  getColor(imageUrl) {
+    return this.service.get(`/getcolor/${imageUrl}`);
+  }
 }
 export default ColorsService;
