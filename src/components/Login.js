@@ -22,7 +22,7 @@ class Login extends React.Component {
       .then((response) => {
         this.props.setCurrentUser(response.data);
         localStorage.setItem("loggedInUser", response.data._id);
-        this.props.history.push("/scan");
+        this.props.history.push("/");
       });
   };
 
