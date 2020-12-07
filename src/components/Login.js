@@ -36,54 +36,58 @@ class Login extends React.Component {
     };
     return (
       <div>
-      <div className="login-box">
-      <img src="eye.png" class="avatar"/>
-        <Form {...layout}>
-          <Form.Item >
-            <Input 
-              placeholder="Username" 
-              name="username"
-              rules={[
-                { required: true, message: "Please input your username!" },
-              ]}
-              type="text"
-              value={this.state.username}
-              onChange={this.handleChange}
-            />
-          </Form.Item>
+        <div className="login-box">
+          <img src="images/eye.png" class="avatar" />
+          <Form {...layout}>
+            <Form.Item>
+              <Input
+                placeholder="Username"
+                name="username"
+                rules={[
+                  { required: true, message: "Please input your username!" },
+                ]}
+                type="text"
+                value={this.state.username}
+                onChange={this.handleChange}
+              />
+            </Form.Item>
 
-          <Form.Item >
-            <Input.Password 
-              placeholder="Password"
-              name="password"
-              rules={[
-                { required: true, message: "Please input your password!" },
-              ]}
-              value={this.state.password}
-              onChange={this.handleChange}
-            />
-          </Form.Item>
+            <Form.Item>
+              <Input.Password
+                placeholder="Password"
+                name="password"
+                rules={[
+                  { required: true, message: "Please input your password!" },
+                ]}
+                value={this.state.password}
+                onChange={this.handleChange}
+              />
+            </Form.Item>
 
-         {/*  <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+            {/*  <Form.Item {...tailLayout} name="remember" valuePropName="checked">
             <Checkbox className="checkbox">Remember me</Checkbox>
           </Form.Item> */}
 
-          <Form.Item {...tailLayout}>
-            <Button className="login-btn"
-              type="primary"
-              htmlType="submit"
-              onClick={this.handleFormSubmit}
-            >
-              Submit
-            </Button>
-          </Form.Item>
-        </Form>
+            <Form.Item {...tailLayout}>
+              <Button
+                className="login-btn"
+                type="primary"
+                htmlType="submit"
+                onClick={this.handleFormSubmit}
+              >
+                Submit
+              </Button>
+            </Form.Item>
+          </Form>
 
-        <p className="loginP">
-          Don't have an account?
-          <Link className="signA" to={"/signup"}> Signup</Link>
-        </p>
-      </div>
+          <p className="loginP">
+            Don't have an account?
+            <Link className="signA" to={"/signup"}>
+              {" "}
+              Signup
+            </Link>
+          </p>
+        </div>
       </div>
     );
   }
