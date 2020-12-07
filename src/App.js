@@ -12,12 +12,13 @@ import ColorCodes from "./components/ColorCodes";
 import ColorTheory from "./components/ColorTheory";
 import Credits from "./components/Credits";
 import Profile from "./components/Profile";
-import "./components/ColorTheo.css";
-import "./components/NavLogSign.css";
-import "./components/Login.css";
-import "./components/Facts.css";
-import "./components/ColorCodes.css";
-import "./components/Scan.css";
+/* import "../public/stylesheet/ColorTheo.css";
+import "../public/stylesheet/NavLogSign.css";
+import "../public/stylesheet/Login.css";
+import "../public/stylesheet/Facts.css"; 
+import "../public/stylesheet/ColorCodes.css";
+import "../public/stylesheet/Scan.css"; */
+
 
 class App extends React.Component {
   state = {
