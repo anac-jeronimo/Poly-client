@@ -16,12 +16,14 @@ class Scan extends React.Component {
     const uploadData = new FormData();
     uploadData.append("file", this.state.file);
     colorsService.uploadFile(uploadData).then((response) => {
-      debugger;
-      console.log("Image uploaded");
       this.setState({
         fileUrlOnCloudinary: response.data.fileUrl,
       });
-      colorsService.getColor(response.data.fileUrl).then((response) => {
+      const imageName = response.data.fileUrl.substring(
+        response.data.fileUrl.lastIndexOf("/") + 1
+      );
+
+      colorsService.getColor(imageName).then((response) => {
         this.setState({
           colorCode: response.data.imageUrl,
           colorName: response.data.colorName,
@@ -53,8 +55,18 @@ class Scan extends React.Component {
         {this.state.fileUrlOnCloudinary ? (
           <img src={this.state.fileUrlOnCloudinary} />
         ) : (
-          <div></div>
+          <div>Uploading...</div>
         )}
+        <div>
+          {this.state.colorCode ? (
+            <div>
+              <img src={this.state.colorCode} />
+              {this.state.colorName}
+            </div>
+          ) : (
+            <div>Loading...</div>
+          )}
+        </div>
       </div>
     );
   }
