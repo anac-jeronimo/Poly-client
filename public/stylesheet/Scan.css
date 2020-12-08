@@ -27,17 +27,20 @@ body {
   color: whitesmoke !important;
 }
 
+.scan-return-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.scan-retun-results-cloudinary {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .uploaded-img {
-  float: right;
 }
 
 .color-code-result {
-  float: left;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  top: -800px !important;
-  margin: 25px;
 }
 
 .color-code-result-img {
