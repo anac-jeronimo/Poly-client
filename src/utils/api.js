@@ -14,5 +14,9 @@ class ColorsService {
   getColor(imageUrl) {
     return this.service.get(`/getcolor/${imageUrl}`);
   }
+
+  addImagesToLibrary(imageurl, userid) {
+    return this.service.put(`/addimage`, { imageurl, userid });
+  }
 }
 export default ColorsService;

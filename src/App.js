@@ -54,7 +54,13 @@ class App extends React.Component {
         />
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/scan" component={Scan} />
+          <Route
+            exact
+            path="/scan"
+            render={() => {
+              return <Scan user={this.state.loggedInUser} />;
+            }}
+          />
           <Route exact path="/signup" component={Signup} />
           <Route
             exact

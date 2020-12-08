@@ -23,10 +23,13 @@ class Profile extends React.Component {
         </div>
         <div>
           <h4> See your library</h4>
-          </div>   
+        </div>
+        <div>
+          <Slider uploads={this.state.loggedInUser.uploads} />
+        </div>
         <div>
           <Scan />
-        </div>  
+        </div>
       </div>
     ) : null;
   }

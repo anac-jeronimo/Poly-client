@@ -7,29 +7,32 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
+import { withRouter } from "react-router-dom";
+import AuthService from "../utils/auth";
+import { unstable_renderSubtreeIntoContainer } from "react-dom";
 
-const items = [
-  {
-    src: "images/Color-blind-grid.png",
-    // altText: "",
-    // caption:
-    //   "Many colorblind people have problems with matching clothes and buying ripe bananas.",
-  },
-  {
-    src: "images/colorblindness-exemple2.png",
-    // altText: "",
-    // caption:
-    //   "Colorblind people feel handicapped in everyday life, and almost nobody recognizes this.",
-  },
-  {
-    src: "images/Color-vision-deficiency.jpg",
-    // altText: "",
-    // caption:
-    //   "Color blindness is also called Daltonism, after the scientist John Dalton.John Dalton was also colorblind himself.",
-  },
+let items = [
+  "images/Color-blind-grid.png",
+  "images/colorblindness-exemple2.png",
+  "images/Color-vision-deficiency.jpg",
 ];
 
 const Slider = (props) => {
+  // let uploads;
+  if (props.uploads && props.uploads.length >= 3) {
+    items = props.uploads;
+    // const getUploads = () => {
+    //   const authservice = new AuthService();
+    //   authservice.loggedin().then((response) => {
+    //     uploads = response.data.uploads;
+    //   });
+    // };
+    // if (uploads.length == 0) {
+    //   getUploads();
+    // }
+    // console.log(uploads);
+  }
+  console.log(items);
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -55,19 +58,15 @@ const Slider = (props) => {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item}
       >
-        <img src={item.src} alt={item.altText} />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        <img src={item} />
+        <CarouselCaption />
       </CarouselItem>
     );
   });
 
   return (
-
     <Carousel activeIndex={activeIndex} next={next} previous={previous}>
       <CarouselIndicators
         items={items}
@@ -88,4 +87,4 @@ const Slider = (props) => {
     </Carousel>
   );
 };
-export default Slider;
+export default withRouter(Slider);

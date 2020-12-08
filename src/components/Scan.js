@@ -1,6 +1,7 @@
 //import { Slider } from "antd";
 import React from "react";
 import ColorsService from "../utils/api";
+import AuthService from "../utils/auth";
 
 class Scan extends React.Component {
   state = {
@@ -8,17 +9,30 @@ class Scan extends React.Component {
     fileUrlOnCloudinary: "",
     colorCode: "",
     colorName: "",
+    user: "",
   };
+
+  componentDidMount() {
+    const authService = new AuthService();
+    authService.loggedin().then((response) => {
+      this.setState({ user: response.data });
+    });
+  }
 
   handleFormSubmit = (event) => {
     event.preventDefault();
+
     const colorsService = new ColorsService();
     const uploadData = new FormData();
     uploadData.append("file", this.state.file);
     colorsService.uploadFile(uploadData).then((response) => {
-      this.setState({
-        fileUrlOnCloudinary: response.data.fileUrl,
-      });
+      colorsService
+        .addImagesToLibrary(response.data.fileUrl, this.state.user._id)
+        .then(() => {
+          this.setState({
+            fileUrlOnCloudinary: response.data.fileUrl,
+          });
+        });
       const imageName = response.data.fileUrl.substring(
         response.data.fileUrl.lastIndexOf("/") + 1
       );
