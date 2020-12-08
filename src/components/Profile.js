@@ -1,4 +1,5 @@
 import React from "react";
+import Scan from "./Scan";
 import Slider from "./Slider";
 
 class Profile extends React.Component {
@@ -21,8 +22,11 @@ class Profile extends React.Component {
           </h3>
         </div>
         <div>
-          <Slider />
-        </div>
+          <h4> See your library</h4>
+          </div>   
+        <div>
+          <Scan />
+        </div>  
       </div>
     ) : null;
   }
