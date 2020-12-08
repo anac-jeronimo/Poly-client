@@ -62,7 +62,7 @@ class Scan extends React.Component {
         <div>
           {this.state.colorCode ? (
             <div className="color-code-result">
-              <div className="color-code-result-code">
+              <div className="color-code-result-img">
                 <img src={this.state.colorCode} />
               </div>
               <div className="color-code-result-name">

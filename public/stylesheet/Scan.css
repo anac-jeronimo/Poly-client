@@ -37,10 +37,12 @@ body {
   justify-content: flex-start;
   align-items: center;
   top: -800px !important;
+  margin: 25px;
 }
 
-.color-code-result-code {
+.color-code-result-img {
   border-radius: 30% !important;
 }
 .color-code-result-name {
+  font-size: 50px;
 }
