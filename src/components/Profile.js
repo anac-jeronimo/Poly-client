@@ -27,9 +27,9 @@ class Profile extends React.Component {
         <div>
           <Slider uploads={this.state.loggedInUser.uploads} />
         </div>
-        <div>
+       {/*  <div>
           <Scan />
-        </div>
+        </div> */}
       </div>
     ) : null;
   }
