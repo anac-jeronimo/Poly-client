@@ -26,3 +26,21 @@ body {
   background-color: #262729 !important;
   color: whitesmoke !important;
 }
+
+.uploaded-img {
+  float: right;
+}
+
+.color-code-result {
+  float: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  top: -800px !important;
+}
+
+.color-code-result-code {
+  border-radius: 30% !important;
+}
+.color-code-result-name {
+}

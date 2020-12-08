@@ -53,15 +53,21 @@ class Scan extends React.Component {
           </div>
         </form>
         {this.state.fileUrlOnCloudinary ? (
-          <img src={this.state.fileUrlOnCloudinary} />
+          <div className="uploaded-img">
+            <img src={this.state.fileUrlOnCloudinary} />
+          </div>
         ) : (
           <div>Uploading...</div>
         )}
         <div>
           {this.state.colorCode ? (
-            <div>
-              <img src={this.state.colorCode} />
-              {this.state.colorName}
+            <div className="color-code-result">
+              <div className="color-code-result-code">
+                <img src={this.state.colorCode} />
+              </div>
+              <div className="color-code-result-name">
+                {this.state.colorName}
+              </div>
             </div>
           ) : (
             <div>Loading...</div>
