@@ -38,7 +38,7 @@ class Scan extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="scan-return-div">
         <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
           <div className="form-group">
             <div>
@@ -52,20 +52,28 @@ class Scan extends React.Component {
             <button className="button-upload">Upload</button>
           </div>
         </form>
-        {this.state.fileUrlOnCloudinary ? (
-          <img src={this.state.fileUrlOnCloudinary} />
-        ) : (
-          <div>Uploading...</div>
-        )}
-        <div>
-          {this.state.colorCode ? (
-            <div>
-              <img src={this.state.colorCode} />
-              {this.state.colorName}
+        <div className="scan-retun-results-cloudinary">
+          {this.state.fileUrlOnCloudinary ? (
+            <div className="uploaded-img">
+              <img src={this.state.fileUrlOnCloudinary} />
             </div>
           ) : (
-            <div>Loading...</div>
+            <div>Uploading...</div>
           )}
+          <div>
+            {this.state.colorCode ? (
+              <div className="color-code-result">
+                <div className="color-code-result-img">
+                  <img src={this.state.colorCode} />
+                </div>
+                <div className="color-code-result-name">
+                  {this.state.colorName}
+                </div>
+              </div>
+            ) : (
+              <div>Loading...</div>
+            )}
+          </div>
         </div>
       </div>
     );
