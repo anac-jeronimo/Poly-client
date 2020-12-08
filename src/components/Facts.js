@@ -63,7 +63,7 @@ function Facts() {
         <li> * Protanopia occurs in about 1% of males.</li>
         <li> * Deuteranopia occurs in about 1% of males.</li>
       </ul>
-      <h6>Useful link: </h6>
+      <h5>Useful link: </h5>
       <p>
           If you want to see more about how diferent color blind </p> 
           <p>
