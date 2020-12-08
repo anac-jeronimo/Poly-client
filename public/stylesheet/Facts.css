@@ -22,6 +22,7 @@
 }
 .img-stripes{
     margin-top: 3vh;
+    width: 60vh;
 }
 
 /* .container-fluid {
@@ -39,4 +40,12 @@
 
  .facts-list{
      margin-top: 4vh; 
+     width: 60vh;
+ }
+
+ .facts-page{
+     line-height: 2em;
+ }
+ .bigP > h3 {
+     margin-bottom: 4vh;
  }
