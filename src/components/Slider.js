@@ -12,9 +12,12 @@ import AuthService from "../utils/auth";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 
 let items = [
-  "images/Color-blind-grid.png",
-  "images/colorblindness-exemple2.png",
-  "images/Color-vision-deficiency.jpg",
+  /* "images/Color-blind-grid.png", */
+  "images/nian.jpg",
+  /* "images/colorblindness-exemple2.png" */
+  "images/dogColorBlind.jpg",
+  /* "images/Color-vision-deficiency.jpg" */
+  "images/chocolate.jpg",
 ];
 
 const Slider = (props) => {
