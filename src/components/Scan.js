@@ -2,6 +2,7 @@
 import React from "react";
 import ColorsService from "../utils/api";
 import AuthService from "../utils/auth";
+import WebcamCapture from "./Camera";
 
 class Scan extends React.Component {
   state = {
@@ -88,6 +89,9 @@ class Scan extends React.Component {
               <div>Loading...</div>
             )}
           </div>
+        </div>
+        <div>
+          <WebcamCapture user={this.state.user} />
         </div>
       </div>
     );

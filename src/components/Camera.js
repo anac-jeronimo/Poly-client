@@ -1,8 +1,9 @@
 import React from "react";
 import Webcam from "react-webcam";
-
+import ColorsService from "../utils/api";
 const WebcamComponent = () => <Webcam />;
-getScreenshot({ width: 1920, height: 1080 });
+
+//getScreenshot();
 
 const videoConstraints = {
   width: 1280,
@@ -10,15 +11,29 @@ const videoConstraints = {
   facingMode: "user",
 };
 
-const WebcamCapture = () => {
+const WebcamCapture = (props) => {
   const webcamRef = React.useRef(null);
-
+  const [imgSrc, setImgSrc] = React.useState(null);
   const capture = React.useCallback(() => {
-    const imageSrc = webcamRef.current.getScreenshot();
-  }, [webcamRef]);
+    const imageSrc = webcamRef.current.getScreenshot({
+      width: 960,
+      height: 540,
+    });
+    setImgSrc(imageSrc);
+  }, [webcamRef, setImgSrc]);
+  if (imgSrc) {
+    const colorsService = new ColorsService();
 
+    colorsService.uploadFile(imgSrc).then((response) => {
+      colorsService
+        .addImagesToLibrary(response.data.fileUrl, props.user._id)
+        .then(() => {
+          console.log("is working");
+        });
+    });
+  }
   return (
-    <>
+    <div>
       <Webcam
         audio={false}
         height={720}
@@ -28,6 +43,9 @@ const WebcamCapture = () => {
         videoConstraints={videoConstraints}
       />
       <button onClick={capture}>Capture photo</button>
-    </>
+      {imgSrc && <img src={imgSrc} />}
+    </div>
   );
 };
+
+export default WebcamCapture;
