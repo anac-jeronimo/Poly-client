@@ -2,7 +2,7 @@
 import React from "react";
 import ColorsService from "../utils/api";
 import AuthService from "../utils/auth";
-import Loader from 'react-loader-spinner'
+import Loader from "react-loader-spinner";
 import WebcamCapture from "./Camera";
 
 class Scan extends React.Component {
@@ -75,14 +75,12 @@ class Scan extends React.Component {
             </div>
           ) : (
             <Loader
-           type="Puff"
-           color="#00BFFF"
-           height={100}
-           width={100}
-           timeout={3000} //3 secs
-   
-        />
-            
+              type="Grid"
+              color="#00BFFF"
+              height={80}
+              width={80}
+              timeout={3000} //3 secs
+            />
           )}
           <div>
             {this.state.colorCode ? (
@@ -96,13 +94,12 @@ class Scan extends React.Component {
               </div>
             ) : (
               <Loader
-           type="Puff"
-           color="#00BFFF"
-           height={100}
-           width={100}
-           timeout={3000} //3 secs
-   
-        />
+                type="Puff"
+                color="#00BFFF"
+                height={100}
+                width={100}
+                timeout={3000} //3 secs
+              />
             )}
           </div>
         </div>
