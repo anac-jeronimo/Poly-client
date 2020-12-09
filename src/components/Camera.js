@@ -16,15 +16,16 @@ const WebcamCapture = (props) => {
   const [imgSrc, setImgSrc] = React.useState(null);
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot({
-      width: 960,
-      height: 540,
+      width: 520,
+      height: 310,
     });
     setImgSrc(imageSrc);
   }, [webcamRef, setImgSrc]);
   if (imgSrc) {
+    console.log(imgSrc);
     const colorsService = new ColorsService();
 
-    colorsService.uploadFile(imgSrc).then((response) => {
+    colorsService.uploadFileCamera(imgSrc).then((response) => {
       colorsService
         .addImagesToLibrary(response.data.fileUrl, props.user._id)
         .then(() => {
