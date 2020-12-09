@@ -51,7 +51,8 @@ function ColorTheory() {
             </ul>
           </div>
           <div className="col-sm">
-            <img src="images/colorwheel.jpg" alt="color wheel" />
+          <img src="images/colorwheel-old.jpg" />
+           {/*  <img src="images/colorwheel.jpg" alt="color wheel" /> */}
           </div>
         </div>
       </div>

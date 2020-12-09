@@ -11,8 +11,9 @@ import Facts from "./components/Facts";
 import ColorCodes from "./components/ColorCodes";
 import ColorTheory from "./components/ColorTheory";
 import Profile from "./components/Profile";
-import Slider from "./components/Slider";
+/* import Slider from "./components/Slider"; */
 import Homepage from "./components/Homepage";
+
 /* import "../public/stylesheet/ColorTheo.css";
 import "../public/stylesheet/NavLogSign.css";
 import "../public/stylesheet/Login.css";

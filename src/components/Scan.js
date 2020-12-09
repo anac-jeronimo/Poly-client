@@ -2,6 +2,7 @@
 import React from "react";
 import ColorsService from "../utils/api";
 import AuthService from "../utils/auth";
+/* import Loader from "./components/Loader"; */
 
 class Scan extends React.Component {
   state = {
@@ -72,7 +73,8 @@ class Scan extends React.Component {
               <img src={this.state.fileUrlOnCloudinary} />
             </div>
           ) : (
-            <div>Uploading...</div>
+    {/*      <Loader /> */}
+            
           )}
           <div>
             {this.state.colorCode ? (
@@ -85,7 +87,7 @@ class Scan extends React.Component {
                 </div>
               </div>
             ) : (
-              <div>Loading...</div>
+{/*              <Loader /> */}
             )}
           </div>
         </div>

@@ -4,9 +4,9 @@ body {
 }
 
 .login-box {
-  width: 600px;
-  height: 500px;
-  background: rgba(187, 186, 186, 0.979);
+  width: 70vh;
+  height: 70vh;
+  background: #3b3c3d;
   color: #fff;
   top: 50%;
   left: 50%;
@@ -15,7 +15,7 @@ body {
   box-sizing: border-box;
   padding: 70px 30px;
   margin-top: 25px;
-  border-radius: 30px;
+   border-radius: 20px 0 20px 0; 
   color: black;
 }
 
@@ -24,15 +24,15 @@ body {
   height: 20%;
   border-radius: 50%;
   position: absolute;
-  top: -50px;
+  top: -10px;
   left: calc(50% - 50px);
 }
-Form > Input {
+  Form > Input {
   margin-bottom: 3vh;
-}
-div > input {
+} 
+ div > input {
   margin-bottom: 3vh;
-}
+}  
 
 .login-box p {
   margin: 0;
@@ -42,9 +42,9 @@ div > input {
 
 Input {
   width: 80%;
-  margin-bottom: 30px;
+ margin-bottom: 30px; 
   height: 40px;
-  margin-top: 15px;
+  margin-top: 30px; 
   border-radius: 30px;
 }
 .checkbox {
@@ -64,30 +64,42 @@ Input {
   border: none;
   outline: none;
   height: 40px;
-  background: #262729;
+  background:  #262729 ;
   color: #fff;
   font-size: 21px;
   border-radius: 15px;
   width: 80%;
-  margin-bottom: 20px;
-  margin-top: 30px;
+  /* margin-bottom: 2px; */
+  margin-top: 40px;
   font-weight: bold;
 }
 
 .login-btn:hover {
   cursor: pointer;
-  background: #4a4a4b;
+  background: #373738;
   color: #000;
 }
 
 .loginP {
   margin-top: 4vh !important;
-  color: black;
+  color:whitesmoke !important;
 }
 .signA {
-  color: black;
+  color: whitesmoke;
 }
 
-/*   .login-box p {
-    font-size: 20px;
-  } */
+.signA:hover {
+  color: whitesmoke;
+}
+
+  .login-box p {
+    font-size: 16px;
+  } 
+
+  .ant-form-item-control-input-content {
+  margin-top: 10px;
+  }
+  .loginParag{
+    color: whitesmoke !important;
+    margin-top: 4vh !important;
+  }

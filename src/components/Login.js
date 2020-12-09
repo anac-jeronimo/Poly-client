@@ -80,7 +80,7 @@ class Login extends React.Component {
             </Form.Item>
           </Form>
 
-          <p className="loginP">
+          <p className="loginParag">
             Don't have an account?
             <Link className="signA" to={"/signup"}>
               {" "}
