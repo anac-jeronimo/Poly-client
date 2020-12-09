@@ -8,4 +8,15 @@
   border-radius: 20px !important;
   padding: 10px 20px;
   margin-left: 5vh !important;
+  margin-top: 5vh;
+}
+
+.webcam-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cam-results-div {
+  margin-bottom: 20vh !important;
 }

@@ -44,19 +44,21 @@ const WebcamCapture = (props) => {
   }
   return (
     <div>
-      <Webcam
-        audio={false}
-        height={360}
-        ref={webcamRef}
-        screenshotFormat="image/jpeg"
-        width={640}
-        videoConstraints={videoConstraints}
-        className="video-camera"
-      />
-      <button className="photo-btn" onClick={capture}>
-        Capture photo
-      </button>
-      <div className="scan-retun-results-cloudinary">
+      <div className="webcam-div">
+        <Webcam
+          audio={false}
+          height={360}
+          ref={webcamRef}
+          screenshotFormat="image/jpeg"
+          width={640}
+          videoConstraints={videoConstraints}
+          className="video-camera"
+        />
+        <button className="photo-btn" onClick={capture}>
+          Capture photo
+        </button>
+      </div>
+      <div className="scan-retun-results-cloudinary cam-results-div">
         {imgSrc ? (
           <div className="uploaded-img">
             <img src={imgSrc} />
