@@ -1,0 +1,11 @@
+.video-camera {
+  border: solid white 8px;
+  border-radius: 20px 0px 20px 0px;
+}
+
+.photo-btn {
+  width: 120px;
+  border-radius: 20px !important;
+  padding: 10px 20px;
+  margin-left: 5vh !important;
+}

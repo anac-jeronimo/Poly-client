@@ -12,6 +12,8 @@ class Scan extends React.Component {
     colorCode: "",
     colorName: "",
     user: "",
+    uploadingImage: false,
+    gettingColorCode: false,
   };
 
   componentDidMount() {
@@ -21,18 +23,34 @@ class Scan extends React.Component {
     });
   }
 
+  setColorResult(colorCode, colorName) {
+    debugger;
+    this.setState({
+      colorCode: colorCode,
+      colorName: colorName,
+    });
+  }
+
   handleFormSubmit = (event) => {
     event.preventDefault();
 
     const colorsService = new ColorsService();
     const uploadData = new FormData();
     uploadData.append("file", this.state.file);
+    this.setState({
+      uploadingImage: true,
+    });
     colorsService.uploadFile(uploadData).then((response) => {
+      this.setState({
+        uploadingImage: false,
+        gettingColorCode: true,
+      });
       colorsService
         .addImagesToLibrary(response.data.fileUrl, this.state.user._id)
         .then(() => {
           this.setState({
             fileUrlOnCloudinary: response.data.fileUrl,
+            gettingColorCode: false,
           });
         });
       const imageName = response.data.fileUrl.substring(
@@ -40,10 +58,7 @@ class Scan extends React.Component {
       );
 
       colorsService.getColor(imageName).then((response) => {
-        this.setState({
-          colorCode: response.data.imageUrl,
-          colorName: response.data.colorName,
-        });
+        this.setColorResult(response.data.imageUrl, response.data.colorName);
       });
     });
   };
@@ -73,15 +88,9 @@ class Scan extends React.Component {
             <div className="uploaded-img">
               <img src={this.state.fileUrlOnCloudinary} />
             </div>
-          ) : (
-            <Loader
-              type="Grid"
-              color="#00BFFF"
-              height={80}
-              width={80}
-              timeout={3000} //3 secs
-            />
-          )}
+          ) : this.state.uploadingImage ? (
+            <Loader type="Grid" color="#00BFFF" height={80} width={80} />
+          ) : null}
           <div>
             {this.state.colorCode ? (
               <div className="color-code-result">
@@ -92,19 +101,16 @@ class Scan extends React.Component {
                   {this.state.colorName}
                 </div>
               </div>
-            ) : (
-              <Loader
-                type="Grid"
-                color="#00BFFF"
-                height={80}
-                width={80}
-                timeout={3000} //3 secs
-              />
-            )}
+            ) : this.state.gettingColorCode ? (
+              <Loader type="Grid" color="#00BFFF" height={80} width={80} />
+            ) : null}
           </div>
         </div>
         <div>
-          <WebcamCapture user={this.state.user} />
+          <WebcamCapture
+            getColorResult={this.setColorResult}
+            user={this.state.user}
+          />
         </div>
       </div>
     );
