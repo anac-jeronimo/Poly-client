@@ -10,3 +10,9 @@ body {
 .mainH2 {
   margin-top: 3vh;
 }
+
+.welcome {
+  color: whitesmoke;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}

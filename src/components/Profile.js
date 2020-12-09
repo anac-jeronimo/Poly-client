@@ -16,12 +16,12 @@ class Profile extends React.Component {
   render() {
     return this.state.loggedInUser ? (
       <div>
-        <div>
-          <h3 className="welcome">
+        <div className="welcome">
+          <h3 >
             Welcome, {this.state.loggedInUser.username}
           </h3>
         </div>
-        <div>
+        <div className="welcome">
           <h4> See your library</h4>
         </div>
         <div>

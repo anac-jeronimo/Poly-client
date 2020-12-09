@@ -2,12 +2,10 @@
 .nav {
   position: absolute;
   color: rgba(15, 14, 14, 0.007) !important;
-  background-color: rgb(182, 179, 179) !important;
+  background-color:#f8f9fA !important;
   height: 8vh;
 }
-.navbar-toggler{
-  
-}
+
 
 .myNavbar {
   padding-left: 4vh !important;

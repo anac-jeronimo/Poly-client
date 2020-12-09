@@ -1,13 +1,13 @@
 body {
   /* background-color: #262729; */
-  background-color: rgb(105, 105, 105);
+  background-color: whitesmoke;
 }
 
 .login-box {
   width: 70vh;
   height: 70vh;
-  background: #3b3c3d;
-  color: #fff;
+  background: whitesmoke;
+  color: whitesmoke;
   top: 50%;
   left: 50%;
   position: absolute;
@@ -16,7 +16,7 @@ body {
   padding: 70px 30px;
   margin-top: 25px;
    border-radius: 20px 0 20px 0; 
-  color: black;
+  color: #111416;
 }
 
 .avatar {
@@ -64,8 +64,8 @@ Input {
   border: none;
   outline: none;
   height: 40px;
-  background:  #262729 ;
-  color: #fff;
+  background:  #111416 ;
+  color: whitesmoke;
   font-size: 21px;
   border-radius: 15px;
   width: 80%;
@@ -76,22 +76,22 @@ Input {
 
 .login-btn:hover {
   cursor: pointer;
-  background: #373738;
-  color: #000;
+  background: #606063;
+  color:#111416;
 }
 
 .loginP {
   margin-top: 4vh !important;
-  color:whitesmoke !important;
+  /* color:whitesmoke !important; */
 }
-.signA {
+/* .signA {
   color: whitesmoke;
 }
-
-.signA:hover {
+ */
+/* .signA:hover {
   color: whitesmoke;
 }
-
+ */
   .login-box p {
     font-size: 16px;
   } 
@@ -100,6 +100,6 @@ Input {
   margin-top: 10px;
   }
   .loginParag{
-    color: whitesmoke !important;
+   /*  color: whitesmoke !important; */
     margin-top: 4vh !important;
   }
