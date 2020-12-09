@@ -2,7 +2,7 @@
 import React from "react";
 import ColorsService from "../utils/api";
 import AuthService from "../utils/auth";
-/* import Loader from "./components/Loader"; */
+import Loader from 'react-loader-spinner'
 import WebcamCapture from "./Camera";
 
 class Scan extends React.Component {
@@ -74,7 +74,14 @@ class Scan extends React.Component {
               <img src={this.state.fileUrlOnCloudinary} />
             </div>
           ) : (
-    {/*      <Loader /> */}
+            <Loader
+           type="Puff"
+           color="#00BFFF"
+           height={100}
+           width={100}
+           timeout={3000} //3 secs
+   
+        />
             
           )}
           <div>
@@ -88,7 +95,14 @@ class Scan extends React.Component {
                 </div>
               </div>
             ) : (
-{/*              <Loader /> */}
+              <Loader
+           type="Puff"
+           color="#00BFFF"
+           height={100}
+           width={100}
+           timeout={3000} //3 secs
+   
+        />
             )}
           </div>
         </div>
