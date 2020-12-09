@@ -6,8 +6,8 @@ const WebcamComponent = () => <Webcam />;
 //getScreenshot();
 
 const videoConstraints = {
-  width: 1280,
-  height: 720,
+  width: 640,
+  height: 360,
   facingMode: "user",
 };
 
@@ -46,17 +46,20 @@ const WebcamCapture = (props) => {
     <div>
       <Webcam
         audio={false}
-        height={720}
+        height={360}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
-        width={1280}
+        width={640}
         videoConstraints={videoConstraints}
+        className="video-camera"
       />
-      <button onClick={capture}>Capture photo</button>
+      <button className="photo-btn" onClick={capture}>
+        Capture photo
+      </button>
       <div className="scan-retun-results-cloudinary">
         {imgSrc ? (
           <div className="uploaded-img">
-            <img src={imgSrc} />}
+            <img src={imgSrc} />
           </div>
         ) : null}
         <div>
