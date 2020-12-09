@@ -1,18 +1,23 @@
-
 body {
   background-color: #262729;
 }
 
 .poly-text {
-  margin-left: 6vh;
-  margin-right: 6vh;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  margin-bottom: 10vh;
+  margin-top: 3vh;
 }
 .mainH2 {
-  margin-top: 3vh;
+  margin-top: 10vh;
 }
 
 .welcome {
   color: whitesmoke;
   margin-top: 2vh;
   margin-bottom: 2vh;
+}
+
+.slider {
+  margin-top: 10vh;
 }

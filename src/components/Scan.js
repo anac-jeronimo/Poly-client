@@ -72,7 +72,7 @@ class Scan extends React.Component {
       <div className="scan-return-div">
         <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
           <div className="form-group">
-            <div>
+            <div className="img-select-btn">
               <label>Please Select an Image:</label>
               <input
                 className="form-control-file"

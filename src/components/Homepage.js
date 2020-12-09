@@ -3,12 +3,12 @@ import React from "react";
 import Slider from "./Slider";
 
 class Homepage extends React.Component {
- /*  state = {
+  /*  state = {
     file: "",
     fileUrlOnCloudinary: "",
   }; */
 
-/*   handleFormSubmit = (event) => {
+  /*   handleFormSubmit = (event) => {
     event.preventDefault();
     const colorsService = new ColorsService();
     const uploadData = new FormData();
@@ -28,16 +28,18 @@ class Homepage extends React.Component {
   render() {
     return (
       <div>
-        <Slider />
+        <div className="slider">
+          <Slider />
+        </div>
         <div className="mainH2">
           <h2>What is POLY?</h2>
           <div className="poly-text">
-          <h5>
-            Poly is an app designed to help those with color blindness and / or
-            reduced vision. Poly allows you to upload images or use the camera
-            in order to translate the dominant color to the symbol created by
-            ColorAdd that corresponds to it!
-          </h5>
+            <h5>
+              Poly is an app designed to help those with color blindness and /
+              or reduced vision. Poly allows you to upload images or use the
+              camera in order to translate the dominant color to the symbol
+              created by ColorAdd that corresponds to it!
+            </h5>
           </div>
         </div>
       </div>
