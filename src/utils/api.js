@@ -11,6 +11,10 @@ class ColorsService {
     return this.service.post("/upload", uploadData);
   }
 
+  uploadFileCamera(url) {
+    return this.service.post("/uploadcamera", { url });
+  }
+
   getColor(imageUrl) {
     return this.service.get(`/getcolor/${imageUrl}`);
   }
