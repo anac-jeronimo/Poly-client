@@ -14,6 +14,9 @@ const videoConstraints = {
 const WebcamCapture = (props) => {
   const webcamRef = React.useRef(null);
   const [imgSrc, setImgSrc] = React.useState(null);
+  const [colorCode, setColorCode] = React.useState(null);
+  const [colorName, setColorName] = React.useState(null);
+
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot({
       width: 520,
@@ -29,7 +32,13 @@ const WebcamCapture = (props) => {
       colorsService
         .addImagesToLibrary(response.data.fileUrl, props.user._id)
         .then(() => {
-          console.log("is working");
+          const imageName = response.data.result.secure_url.substring(
+            response.data.result.secure_url.lastIndexOf("/") + 1
+          );
+          colorsService.getColor(imageName).then((response) => {
+            setColorCode(response.data.imageUrl);
+            setColorName(response.data.colorName);
+          });
         });
     });
   }
@@ -44,7 +53,23 @@ const WebcamCapture = (props) => {
         videoConstraints={videoConstraints}
       />
       <button onClick={capture}>Capture photo</button>
-      {imgSrc && <img src={imgSrc} />}
+      <div className="scan-retun-results-cloudinary">
+        {imgSrc ? (
+          <div className="uploaded-img">
+            <img src={imgSrc} />}
+          </div>
+        ) : null}
+        <div>
+          {colorCode ? (
+            <div className="color-code-result">
+              <div className="color-code-result-img">
+                <img src={colorCode} />
+              </div>
+              <div className="color-code-result-name">{colorName}</div>
+            </div>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 };
