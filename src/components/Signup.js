@@ -29,7 +29,7 @@ class Signup extends React.Component {
     return (
       <div>
         <form className="login-box" onSubmit={this.handleFormSubmit}>
-          <img src="eye.png" className="avatar" />
+          <img  src="images/eye.png" className="avatar" />
           {/* <label>Username:</label> */}
           <input
             className="input"
@@ -58,11 +58,12 @@ class Signup extends React.Component {
             onChange={this.handleChange}
           />
           <button className="login-btn">Signup</button>
-        </form>
-        <p className="loginP">
+          <p className="loginP">
           Already have an account?
           <Link to={"/login"}> Login</Link>
         </p>
+        </form>
+       
       </div>
     );
   }
