@@ -36,7 +36,7 @@ class ColorCodes extends React.Component {
               </div>
               <div className="img2">
                 <img
-                  src="images/Code_cinzas.gif"
+                  src="images/CODE_cinzas.gif"
                   alt="colorAdd grey tons symbols"
                 />
               </div>
@@ -44,7 +44,7 @@ class ColorCodes extends React.Component {
             <div className="col-sm">
               <div className="img3">
                 <img
-                  src="images/COLOR-ADD_1.jpg"
+                  src="images/Color-ADD_1.jpg"
                   alt="colorAdd translation graph"
                 />
               </div>
