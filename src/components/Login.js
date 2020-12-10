@@ -20,6 +20,7 @@ class Login extends React.Component {
     authService
       .login(this.state.username, this.state.password)
       .then((response) => {
+        console.log(response.data)
         this.props.setCurrentUser(response.data);
         localStorage.setItem("loggedInUser", response.data._id);
         this.props.history.push("/");

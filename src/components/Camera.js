@@ -44,7 +44,11 @@ const WebcamCapture = (props) => {
       .then((response) => {
         setColorCode(response.data.imageUrl);
         setColorName(response.data.colorName);
-      });
+        return colorsService.addImagesToLibrary(imageUrl, props.user._id)
+      })
+      .then(() => {
+        console.log('image was push to favorites')
+      })
   }
 
   /*
