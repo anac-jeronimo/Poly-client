@@ -29,7 +29,7 @@ class Signup extends React.Component {
     return (
       <div>
         <form className="login-box" onSubmit={this.handleFormSubmit}>
-          <img  src="images/eye.png" className="avatar" />
+          <img src="images/eye.png" className="avatar" />
           {/* <label>Username:</label> */}
           <input
             className="input"
