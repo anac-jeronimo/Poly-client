@@ -41,7 +41,10 @@
 .facts-list {
   margin-top: 4vh;
   width: 55vh;
-  line-height: 3em;
+  /* line-height: 3em; */
+}
+.facts-list > li {
+  margin-bottom: 3vh;
 }
 
 .facts-page {
@@ -53,4 +56,8 @@
 
 .bigP > p {
   line-height: 2em;
+}
+
+.test {
+  margin-top: 3vh;
 }

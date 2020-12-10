@@ -51,11 +51,16 @@ function Facts() {
        src="images\eyeTest_know_color_blindness.jpg"
         alt="color blindness spectrum comparison"
       />
+      <div className="test">
+      <a target="_blank" href="https://www.color-blindness.com/ishihara_cvd_test/ishihara_cvd_test.html?iframe=true&width=500&height=428">
+        Take the test!
+      </a>
+      </div>
       </div>
       <div className="col-sm useful-link">
       <h3> Statistics </h3>
       <ul className="facts-list">
-        <li>*  0.38% of women are deuteranomalous (around 95% of all color deficient women).</li>
+        <li> *  0.38% of women are deuteranomalous (around 95% of all color deficient women).</li>
         <li>*  0.005% of the population are totally colour blind.</li>
         <li> * 0.003% of the population have tritanopia.</li>
         <li> * Protanomaly occurs in about 1% of males.</li>
