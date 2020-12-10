@@ -4,6 +4,7 @@ import ColorsService from "../utils/api";
 const WebcamComponent = () => <Webcam />;
 
 //getScreenshot();
+let imageUrl;
 
 const videoConstraints = {
   width: 640,
@@ -19,18 +20,43 @@ const WebcamCapture = (props) => {
 
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot({
-      width: 520,
-      height: 310,
+      width: 640,
+      height: 360,
     });
     setImgSrc(imageSrc);
-  }, [webcamRef, setImgSrc]);
+  });
+
   if (imgSrc) {
-    console.log(imgSrc);
+    console.log("this is the image from the cam", imgSrc);
+    //    let myImageSource = JSON.stringify(imgSrc);
+    const colorsService = new ColorsService();
+    colorsService
+      .uploadFileCamera(imgSrc)
+      .then((response) => {
+        setImgSrc(null);
+        console.log("this is the response from uploading the file", response);
+        imageUrl = response.data.result.secure_url;
+        const imageName = response.data.result.secure_url.substring(
+          response.data.result.secure_url.lastIndexOf("/") + 1
+        );
+        return colorsService.getColor(imageName);
+      })
+      .then((response) => {
+        setColorCode(response.data.imageUrl);
+        setColorName(response.data.colorName);
+      });
+  }
+
+  /*
+  if (imgSrc) {
+    console.log("this is the image from the cam", imgSrc);
+
     const colorsService = new ColorsService();
 
     colorsService.uploadFileCamera(imgSrc).then((response) => {
+      console.log("this is the response from uploading", response.data);
       colorsService
-        .addImagesToLibrary(response.data.fileUrl, props.user._id)
+        .addImagesToLibrary(response.data.result.url, props.user._id)
         .then(() => {
           const imageName = response.data.result.secure_url.substring(
             response.data.result.secure_url.lastIndexOf("/") + 1
@@ -42,6 +68,7 @@ const WebcamCapture = (props) => {
         });
     });
   }
+  */
   return (
     <div>
       <div className="webcam-div">
@@ -59,9 +86,9 @@ const WebcamCapture = (props) => {
         </button>
       </div>
       <div className="scan-retun-results-cloudinary cam-results-div">
-        {imgSrc ? (
+        {imageUrl ? (
           <div className="uploaded-img">
-            <img src={imgSrc} />
+            <img src={imageUrl} />
           </div>
         ) : null}
         <div>

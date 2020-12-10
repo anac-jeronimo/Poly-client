@@ -24,7 +24,6 @@ class Scan extends React.Component {
   }
 
   setColorResult(colorCode, colorName) {
-    debugger;
     this.setState({
       colorCode: colorCode,
       colorName: colorName,
