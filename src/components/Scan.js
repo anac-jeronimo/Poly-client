@@ -69,20 +69,29 @@ class Scan extends React.Component {
   render() {
     return (
       <div className="scan-return-div">
+        <div className="upload-img">
+          <h4>Upload an image!</h4>
+        </div>
         <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
           <div className="form-group">
             <div className="img-select-btn">
-              <label>Please Select an Image:</label>
+              <div className="upload-lab">
+                <label>1.Please Select an Image:</label>
+              </div>
               <input
                 className="form-control-file"
                 type="file"
                 onChange={this.handleFileChange}
               />
             </div>
-            <button className="button-upload">Upload</button>
+            <button className="button-upload">2.Upload</button>
           </div>
         </form>
+        <div className="scan-div">or</div>
         <div className="scan-retun-results-cloudinary">
+          <div className="take-pic">
+            <h4 className="take-pic-h4">Take a picture!</h4>
+          </div>
           {this.state.fileUrlOnCloudinary ? (
             <div className="uploaded-img">
               <img src={this.state.fileUrlOnCloudinary} />
