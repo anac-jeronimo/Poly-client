@@ -119,3 +119,7 @@ body {
   display: inline-block;
   justify-self: center;
 } */
+.upload-img-div {
+  width: 100%;
+  height: 100%;
+}
